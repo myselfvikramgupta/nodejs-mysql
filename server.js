@@ -8,7 +8,7 @@ app.use(express.json());
 app.use("/api", routes);
 
 // Get Environment
-app.get("/", (req, res,next) => {
+app.get("/", (req, res) => {
   res.send(`<h1>${APP_ENVIRONMENT} Environment </h1>`);
 });
 
