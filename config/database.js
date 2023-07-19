@@ -1,13 +1,12 @@
 import knex from 'knex';
-
+import {DB_CONNECTION,DB_HOST,DB_USERNAME,DB_PASSWORD,DB_DATABASE} from './index';
 const mySqlCon = knex({
-    client: process.env.DB_CONNECTION,
-    useNullAsDefault: true,
+    client: DB_CONNECTION,
     connection: {
-      host : process.env.DB_HOST,
-      user : process.env.DB_USERNAME,
-      password : process.env.DB_PASSWORD,
-      database : process.env.DB_DATABASE
+      host : DB_HOST,
+      user : DB_USERNAME,
+      password : DB_PASSWORD,
+      database : DB_DATABASE
     }
   });
   //check connection
